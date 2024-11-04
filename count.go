@@ -3,6 +3,7 @@ package main
 import (
 	"io"
 	"math/rand/v2"
+	"unique"
 )
 
 func countExactDistinctWords(r io.Reader) (int, int) {
@@ -10,6 +11,16 @@ func countExactDistinctWords(r io.Reader) (int, int) {
 	words := make(map[string]bool)
 	for w := range Words(r) {
 		words[w] = true
+		count++
+	}
+	return count, len(words)
+}
+
+func countExactDistinctWordsInterned(r io.Reader) (int, int) {
+	count := 0
+	words := make(map[unique.Handle[string]]bool)
+	for w := range Words(r) {
+		words[unique.Make(w)] = true
 		count++
 	}
 	return count, len(words)

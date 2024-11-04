@@ -35,6 +35,13 @@ func main3(inputFile string, memSize int) {
 	m = clearMemory(f)
 	fmt.Printf("[ExactCount] Used %dkB heap memory in %dms\n\n", m-m0, time.Since(start).Milliseconds())
 
+	// // interning
+	// start = time.Now()
+	// totalCount, distinctCount = countExactDistinctWordsInterned(f)
+	// fmt.Printf("[ExactCountInterned] Found %d distinct words (out of %d total words)\n", distinctCount, totalCount)
+	// m = clearMemory(f)
+	// fmt.Printf("[ExactCountInterned] Used %dkB heap memory in %dms\n\n", m-m0, time.Since(start).Milliseconds())
+
 	// CVM
 	start = time.Now()
 	totalCount, distinctCount, rounds = countApproxDistinctWords(f, memSize)
