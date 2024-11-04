@@ -22,9 +22,9 @@ func main3(inputFile string, memSize int) {
 	fmt.Println()
 
 	var (
-		m0, m                     uint64
-		start                     time.Time
-		totalCount, distinctCount int
+		m0, m                             uint64
+		start                             time.Time
+		totalCount, distinctCount, rounds int
 	)
 	m0 = disableGC()
 
@@ -34,4 +34,11 @@ func main3(inputFile string, memSize int) {
 	fmt.Printf("[ExactCount] Found %d distinct words (out of %d total words)\n", distinctCount, totalCount)
 	m = clearMemory(f)
 	fmt.Printf("[ExactCount] Used %dkB heap memory in %dms\n\n", m-m0, time.Since(start).Milliseconds())
+
+	// CVM
+	start = time.Now()
+	totalCount, distinctCount, rounds = countApproxDistinctWords(f, memSize)
+	fmt.Printf("[ApproxCount(%d)] Estimated %d distinct words in %d rounds (out of %d total words)\n", memSize, distinctCount, rounds, totalCount)
+	m = clearMemory(f)
+	fmt.Printf("[ApproxCount(%d)] Used %dkB heap memory in %dms\n\n", memSize, m-m0, time.Since(start).Milliseconds())
 }
