@@ -18,5 +18,7 @@ func main() {
 		return
 	}
 
+	main1()
+	main2(*inputFile)
 	main3(*inputFile, *memSize)
 }
