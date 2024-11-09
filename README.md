@@ -31,3 +31,12 @@ Il y a 3 grandes parties
 Cette conférence a été présentée :
 
 - au [meetup Golang Rennes](https://www.meetup.com/fr-FR/golang-rennes/events/303884251/) le 19 novembre 2024
+
+### Sources et liens utiles
+
+- Contexte et décisions, dans la proposition initiale : https://github.com/golang/go/discussions/56413
+- Article du blog Golang qui détaille le fonctionnement des itérateurs : https://go.dev/blog/range-functions
+- Discussions avec [Thibaut Rousseau](https://github.com/Thiht), notamment pour les [tests unitaires](./backward_test.go)
+- Arguments contre l'ajout des itérateurs : https://itnext.io/go-evolves-in-the-wrong-direction-7dfda8a1a620
+- Publication scientifique présentant l'algorithme CVM : https://arxiv.org/pdf/2301.10191
+- Article décrivant l'intérêt et les cas d'usage du nouveau package [`unique`](https://pkg.go.dev/unique), introduit également dans Go 1.23, que je n'ai pas réussi à utiliser de façon efficace [dans cette démo](https://github.com/benoitmasson/gi-go/commit/07c7482d1033e520b56cb2cb5ebac66f31ebb238) : https://medium.com/google-cloud/interning-in-go-4319ea635002
