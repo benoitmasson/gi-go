@@ -1,8 +1,8 @@
 # G.I. Go - Générateurs & Itérateurs en Go
 
-<img alt="Illustration de gentil G.I. Gopher" src="./images/gi%20gopher.png" width="200px" /> <!-- markdownlint-disable-line MD033: inline HTML required for scaling images -->
+<img alt="Illustration de gentil G.I. Gopher" src="./slides/images/gi%20gopher.png" width="200px" /> <!-- markdownlint-disable-line MD033: inline HTML required for scaling images -->
 
-_(illustration générée avec ChatGPT)_ <!-- markdownlint-disable-line MD036: this is italics on purpose -->
+_(illustration générée avec [ChatGPT](https://chatgpt.com/))_ <!-- markdownlint-disable-line MD036: this is italics on purpose -->
 
 ## ou « Comment compter les Gophers sans perdre la mémoire »
 
