@@ -30,7 +30,8 @@ Il y a 3 grandes parties
 
 Cette conférence a été présentée :
 
-- au [meetup Golang Rennes](https://www.meetup.com/fr-FR/golang-rennes/events/303884251/) le 19 novembre 2024
+- au [meetup Golang Rennes](https://www.meetup.com/fr-FR/golang-rennes/events/303884251/) le 19 novembre 2024  
+  🔎 [_slides_](./slides/gi-go.pdf)
 
 ### Sources et liens utiles
 
