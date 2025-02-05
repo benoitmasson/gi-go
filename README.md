@@ -30,8 +30,10 @@ Il y a 3 grandes parties
 
 Cette conférence a été présentée :
 
-- au [meetup Golang Rennes](https://www.meetup.com/fr-FR/golang-rennes/events/303884251/) le 19 novembre 2024  
+- en version longue, au [meetup Golang Rennes](https://www.meetup.com/fr-FR/golang-rennes/events/303884251/) le 19 novembre 2024  
   🔎 [_slides_](../golang-rennes/slides/gi-go.pdf)
+- en version courte (itérateurs Go uniquement) à la conférence [Touraine Tech](https://touraine.tech/talk/cm21z8ot704td1139n648womz/) le 7 février 2025  
+  🔎 [_slides_](../touraine-tech/slides/gi-go.pdf)
 
 ### Sources et liens utiles
 
