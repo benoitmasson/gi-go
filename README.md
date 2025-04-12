@@ -32,8 +32,11 @@ Cette conférence a été présentée :
 
 - en version longue, au [meetup Golang Rennes](https://www.meetup.com/fr-FR/golang-rennes/events/303884251/) le 19 novembre 2024  
   🔎 [_slides_](../golang-rennes/slides/gi-go.pdf)
-- en version courte (itérateurs Go uniquement) à la conférence [Touraine Tech](https://touraine.tech/talk/cm21z8ot704td1139n648womz/) le 7 février 2025  
-  🔎 [_slides_](../touraine-tech/slides/gi-go.pdf)
+- en version courte (itérateurs Go uniquement) aux conférences
+  - [Touraine Tech](https://touraine.tech/talk/cm21z8ot704td1139n648womz/) le 7 février 2025  
+    🔎 [_slides_](../touraine-tech/slides/gi-go.pdf)
+  - [Devoxx France](https://www.devoxx.fr/agenda-2025/talk/g-i-go-generateurs-et-iterateurs-en-go/) le 16 avril 2025  
+    🔎 [_slides_](../devoxx-fr/slides/gi-go.pdf)
 
 ### Sources et liens utiles
 
