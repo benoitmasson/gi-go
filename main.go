@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	s := strings.Fields("Hello Touraine Tech 2025")
+	s := strings.Fields("Hello Devoxx France 2025")
 	for i, w := range Backward(s) {
 		fmt.Println(w)
 		if i == 2 {
@@ -26,7 +26,7 @@ func main() {
 
 	for w := range c {
 		fmt.Println(w)
-		if w == "Tech" {
+		if w == "France" {
 			cancel()
 			break
 		}
