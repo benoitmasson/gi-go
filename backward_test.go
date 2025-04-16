@@ -8,7 +8,7 @@ import (
 )
 
 func TestBackward(t *testing.T) {
-	input := strings.Fields("Hello Touraine Tech 2025")
+	input := strings.Fields("Hello Devoxx France 2025")
 	expected := slices.Clone(input)
 	slices.Reverse(expected)
 
