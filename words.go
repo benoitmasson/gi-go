@@ -11,7 +11,7 @@ import (
 
 const bufSize = 1024
 
-func Words(r io.Reader) iter.Seq[string] {
+func ReadFields(r io.Reader) iter.Seq[string] {
 	return func(yield func(string) bool) {
 		byteBuf := make([]byte, bufSize)
 		wordBuf := bytes.Buffer{}

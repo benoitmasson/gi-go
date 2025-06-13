@@ -3,55 +3,86 @@ package main
 import (
 	"io"
 	"math/rand/v2"
-	"unique"
+	"strings"
 )
 
-func countExactDistinctWords(r io.Reader) (int, int) {
+/* Count total */
+
+func countExactTotalSheep(r io.Reader) int {
+	data, err := io.ReadAll(r)
+	if err != nil {
+		panic(err)
+	}
+
+	sheepNames := strings.Fields(string(data))
 	count := 0
-	words := make(map[string]bool)
-	for w := range Words(r) {
-		words[w] = true
+	for _, name := range sheepNames {
+		admireSheep(name)
 		count++
 	}
-	return count, len(words)
+	return count
 }
 
-func countExactDistinctWordsInterned(r io.Reader) (int, int) {
+func admireSheep(name string) {
+	/*
+		        __  _
+		    ,-:'  `; `-._
+		   (_,           )
+		 ,'o"(            )>
+		(__,-'            )
+		   (             )
+		    `-'._.--._.-'
+		       || || ||
+	*/
+}
+
+func countExactTotalSheepIterator(r io.Reader) int {
 	count := 0
-	words := make(map[unique.Handle[string]]bool)
-	for w := range Words(r) {
-		words[unique.Make(w)] = true
+	for sheepName := range ReadFields(r) {
+		admireSheep(sheepName)
 		count++
 	}
-	return count, len(words)
+	return count
 }
 
-// countApproxDistinctWords implements CVM algorithm
+/* Count distinct */
+
+func countExactDistinctSheep(r io.Reader) (int, int) {
+	count := 0
+	sheepNames := make(map[string]bool)
+	for sheepName := range ReadFields(r) {
+		sheepNames[sheepName] = true
+		count++
+	}
+	return count, len(sheepNames)
+}
+
+// countApproxDistinctSheep implements CVM algorithm
 // See https://www.quantamagazine.org/computer-scientists-invent-an-efficient-new-way-to-count-20240516/
-func countApproxDistinctWords(r io.Reader, memSize int) (int, int, int) {
+func countApproxDistinctSheep(r io.Reader, memSize int) (int, int, int) {
 	count := 0
-	words := make(map[string]bool, memSize)
+	sheepNames := make(map[string]bool, memSize)
 	currentRound := 0
-	for w := range Words(r) {
+	for sheepName := range ReadFields(r) {
 		count++
 
 		// fmt.Println(w, currentRound, len(words))
 		if rand.Uint64N(1<<currentRound) > 0 {
 			// randomly clear memory
 			// keeping/storing words becomes more and more difficult as rounds go by (two times harder by round)
-			delete(words, w)
+			delete(sheepNames, sheepName)
 		} else {
-			words[w] = true
+			sheepNames[sheepName] = true
 		}
 
-		if len(words) >= memSize {
+		if len(sheepNames) >= memSize {
 			// memory full: cleanup half of it and move to next round
-			cleanup(words)
+			cleanup(sheepNames)
 			currentRound++
 		}
 	}
 
-	return count, len(words) << currentRound, currentRound + 1
+	return count, len(sheepNames) << currentRound, currentRound + 1
 }
 
 // cleanup randomly clears half of the keys
