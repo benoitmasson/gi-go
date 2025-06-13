@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"os"
 	"time"
 )
@@ -34,6 +35,7 @@ func main3(inputFile string, memSize int) {
 	fmt.Printf("[ExactCount] Found %d distinct words (out of %d total words)\n", distinctCount, totalCount)
 	m = clearMemory(f)
 	fmt.Printf("[ExactCount] Used %dkB heap memory in %dms\n\n", m-m0, time.Since(start).Milliseconds())
+	exactCount := distinctCount
 
 	// // interning
 	// start = time.Now()
@@ -47,5 +49,6 @@ func main3(inputFile string, memSize int) {
 	totalCount, distinctCount, rounds = countApproxDistinctWords(f, memSize)
 	fmt.Printf("[ApproxCount(%d)] Estimated %d distinct words in %d rounds (out of %d total words)\n", memSize, distinctCount, rounds, totalCount)
 	m = clearMemory(f)
+	fmt.Printf("[ApproxCount(%d)] Error rate: %.2f%%\n", memSize, math.Abs(100*(float64(distinctCount-exactCount)/float64(exactCount))))
 	fmt.Printf("[ApproxCount(%d)] Used %dkB heap memory in %dms\n\n", memSize, m-m0, time.Since(start).Milliseconds())
 }
