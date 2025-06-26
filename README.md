@@ -32,6 +32,9 @@ Cette conférence a été présentée :
 
 - en version longue, au [meetup Golang Rennes](https://www.meetup.com/fr-FR/golang-rennes/events/303884251/) le 19 novembre 2024  
   🔎 [_slides_](../golang-rennes/slides/gi-go.pdf)
+- en version conférence (algorithme CVM de comptage) à la conférence
+  - [BreizhCamp](https://www.breizhcamp.org/conference/programme/) le 27 juin 2025  
+    🔎 [_slides_](../breizhcamp/slides/counting-sheep.pdf)
 - en version courte (itérateurs Go uniquement) aux conférences
   - [Touraine Tech](https://touraine.tech/talk/cm21z8ot704td1139n648womz/) le 7 février 2025  
     🔎 [_slides_](../touraine-tech/slides/gi-go.pdf)
